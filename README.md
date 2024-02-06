@@ -1,0 +1,3 @@
+# EasyEvent
+
+#### Crafted "EasyEvent", an innovative event booking website with a dynamic and responsive frontend built on the APIs. The backend, structured with schemas and resolvers, efficiently handles user authentication, booking procedures, and event management. Implemented joins and schema references between models, prioritizing type safety within the MERN and GraphQL. Employed a client-server architecture for seamless interaction.
