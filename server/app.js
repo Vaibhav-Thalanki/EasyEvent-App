@@ -10,20 +10,20 @@ const cors = require('cors')
 app.use(cors())
 app.options('*',cors())
 
-// app.use((req,res,next)=>{
-//   res.setHeader('Access-Control-Allow-Origin','https://easy-event-app-frontend.vercel.app')
-//   res.setHeader('Access-Control-Allow-Methods','POST,GET,OPTIONS')
-//   res.setHeader('Access-Control-Allow-Headers','Content-Type,Authorization')
-//   if(req.method === 'OPTIONS'){
-//     return res.sendStatus(200)
-//   }
-//   next();
-// })
-// app.use(cors({
-//   origin: "https://easy-event-app-frontend.vercel.app",
-//   methods: ["POST","GET"],
-//   credentials: true
-// }))
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin','*')
+  res.setHeader('Access-Control-Allow-Methods','POST,GET,OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers','Content-Type,Authorization')
+  if(req.method === 'OPTIONS'){
+    return res.sendStatus(200)
+  }
+  next();
+})
+app.use(cors({
+  origin: "*",
+  methods: ["POST","GET"],
+  credentials: true
+}))
 
 // body parser
 app.use(express.json());

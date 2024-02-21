@@ -35,7 +35,7 @@ const BookingsPage = () => {
                   }`,
       };
 
-      fetch("https://easy-event-app.vercel.app/graphql", {
+      fetch("https://easy-event-app-api.vercel.app/graphql", {
         method: "POST",
         body: JSON.stringify(requestBody),
         headers: {
@@ -82,7 +82,7 @@ const BookingsPage = () => {
                 }`,
     };
 
-    fetch("https://easy-event-app.vercel.app/graphql", {
+    fetch("https://easy-event-app-api.vercel.app/graphql", {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
